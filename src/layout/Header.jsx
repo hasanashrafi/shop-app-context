@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { FcShop } from 'react-icons/fc';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,8 +28,8 @@ function Header() {
 
           <nav className="flex justify-between bg-blue-600 text-white w-screen">
             <div className="px-5 xl:px-12 py-3 flex w-full items-center">
-              <a className="text-3xl font-bold font-heading" href="#">
-                <img className=" size-10 rounded-full" src="/logo.png" alt="logo" />
+              <a className="text-4xl rounded font-bold font-heading" href="#">
+              <FcShop className='' />
               </a>
 
               <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
