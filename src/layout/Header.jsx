@@ -22,10 +22,10 @@ function Header() {
   }, []);
 
   return (
-    <>
-      <div className="flex flex-wrap place-items-center  ">
-        <section className="relative mx-auto">
-          <nav className="flex justify-between bg-blue-600 text-white w-screen">
+    <div >
+      <div className="flex flex-wrap place-items-center mx-auto ">
+        <section className="relative mx-auto w-full">
+          <nav className="flex justify-between bg-blue-600 text-white w-full">
             <div className="px-5 xl:px-12 py-3 flex w-full items-center">
               <a className="text-4xl rounded font-bold font-heading" href="#">
               <FcShop className='' />
@@ -89,7 +89,7 @@ function Header() {
         </div>
       )}
 
-    </>
+    </div>
 
   )
 }
