@@ -6,12 +6,14 @@ import NotFoundPage from '../components/NotFoundPage';
 import ProductsPage from '../pages/ProductsPage';
 import DetailsPage from '../pages/DetailsPage';
 import CheckOutPage from '../pages/CheckOutPage';
+import ProductsProvider from '../context/ProductContext';
 
 
 
 
 function Router() {
   return (
+<ProductsProvider>
 
     <BrowserRouter>
       <Layout>
@@ -24,6 +26,7 @@ function Router() {
         </Routes>
       </Layout>
     </BrowserRouter>
+</ProductsProvider>
 
   )
 }
