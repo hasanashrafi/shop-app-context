@@ -28,32 +28,32 @@ function Slider() {
 
     return (
 
-       <div className=' p-10 my-10'>
-         <Swiper
-           effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={3}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-     
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper">
-            {
-                products.length && products.map((product) =>
+        <div className='mx-auto w-full  p-2 my-5'>
+            <Swiper
+                effect={'coverflow'}
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView={3}
+                coverflowEffect={{
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                }}
 
-                    <SwiperSlide key={product.id} className=' ' >
-                        <img src={product.images[0]} className='rounded-lg w-full h-96 ' />
-                    </SwiperSlide>
-                )
-            }
-        </Swiper>
-       </div>
+                modules={[EffectCoverflow, Pagination]}
+                className="mySwiper">
+                {
+                    products.length && products.map((product) =>
+
+                        <SwiperSlide key={product.id} className=' ' >
+                            <img src={product.images[0]} className='rounded-lg w-full h-96 ' />
+                        </SwiperSlide>
+                    )
+                }
+            </Swiper>
+        </div>
 
     )
 }
