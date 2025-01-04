@@ -6,9 +6,9 @@ import { BiDollar } from 'react-icons/bi';
 
 function ProductCard({ product }) {
     return (
-        <div className=" flex flex-col justify-between w-64 h-[370px] p-3  shadow-lg  rounded text-black">
+        <div className=" flex flex-col justify-between w-64 h-[350px] p-3  shadow-lg  rounded text-black">
             <img src={product.images[1]} alt={product.title} className='rounded-md w-full h-36 border' />
-            <h2 className="text-lg font-bold">{product.title}</h2>
+            <h2 className=" font-semibold">{product.title}</h2>
             <p className="text-sm text-gray-600 ">{shortestTitle(product.description)}</p>
            <p className='flex items-center '><BiDollar/> {product.price}</p>
           
