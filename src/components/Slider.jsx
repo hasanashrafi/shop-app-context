@@ -28,12 +28,12 @@ function Slider() {
 
     return (
 
-        <div className='mx-auto w-full  p-2 my-5'>
+        <div className='h-64 mx-auto w-full bg-blue-600 p-2 my-5'>
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}
                 centeredSlides={true}
-                slidesPerView={3}
+                slidesPerView={2}
                 coverflowEffect={{
                     rotate: 50,
                     stretch: 0,
@@ -47,8 +47,10 @@ function Slider() {
                 {
                     products.length && products.map((product) =>
 
-                        <SwiperSlide key={product.id} className=' ' >
-                            <img src={product.images[0]} className='rounded-lg w-full h-96 ' />
+                        <SwiperSlide 
+                        key={product.id} 
+                        className=' shadow-md  ' >
+                            <img src={product.images[1]} className='rounded-lg w-full md:h-96 h-56 ' />
                         </SwiperSlide>
                     )
                 }
