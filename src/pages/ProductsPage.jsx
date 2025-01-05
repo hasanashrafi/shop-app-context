@@ -38,27 +38,27 @@ function ProductsPage() {
   };
 
   return (
-    <div className='w-full p-2 flex flex-col justify-center mx-auto'>
+    <div className='mt-10 w-full p-2 flex flex-col justify-center mx-auto'>
 
 
       <div className='  p-1 flex justify-center mt-4 text-black  '>
         <ul className='w-full justify-center mx-auto flex flex-wrap p-2 items-center  md:flex md:justify-center gap-2' onClick={categoryHandler}>
-          <li className='w-32 md:w-28 md:text-sm shadow-md p-2 text-center bg-white hover:text-white   rounded-md cursor-pointer hover:bg-blue-700'>
+          <li className='w-32 md:w-28 md:text-sm shadow-md p-2 text-center bg-white hover:text-white   rounded-md cursor-pointer hover:bg-teal-700'>
             All
           </li>
-          <li className='w-32 md:w-28 md:text-sm shadow-md p-2 text-center bg-white hover:text-white   rounded-md cursor-pointer hover:bg-blue-700'>
+          <li className='w-32 md:w-28 md:text-sm shadow-md p-2 text-center bg-white hover:text-white   rounded-md cursor-pointer hover:bg-teal-700'>
             Clothe
           </li>
-          <li className='w-32 md:w-28 md:text-sm shadow-md p-2 text-center bg-white hover:text-white   rounded-md cursor-pointer hover:bg-blue-700'>
+          <li className='w-32 md:w-28 md:text-sm shadow-md p-2 text-center bg-white hover:text-white   rounded-md cursor-pointer hover:bg-teal-700'>
             Electronicss
           </li>
-          <li className='w-32 md:w-28 md:text-sm shadow-md p-2 text-center bg-white hover:text-white   rounded-md cursor-pointer hover:bg-blue-700'>
+          <li className='w-32 md:w-28 md:text-sm shadow-md p-2 text-center bg-white hover:text-white   rounded-md cursor-pointer hover:bg-teal-700'>
             Miscellaneous
           </li>
-          <li className='w-32 md:w-28 md:text-sm shadow-md p-2 text-center bg-white hover:text-white   rounded-md cursor-pointer hover:bg-blue-700'>
+          <li className='w-32 md:w-28 md:text-sm shadow-md p-2 text-center bg-white hover:text-white   rounded-md cursor-pointer hover:bg-teal-700'>
             Shoes
           </li>
-          <li className='w-32 md:w-28 md:text-sm shadow-md p-2 text-center bg-white hover:text-white   rounded-md cursor-pointer hover:bg-blue-700'>
+          <li className='w-32 md:w-28 md:text-sm shadow-md p-2 text-center bg-white hover:text-white   rounded-md cursor-pointer hover:bg-teal-700'>
             Furniture
           </li>
         </ul>
