@@ -28,7 +28,7 @@ function Slider() {
 
     return (
 
-        <div className='h-64 mx-auto w-full bg-blue-600 p-2 my-5'>
+        <div className='h-64 mx-auto w-full  p-2 my-5'>
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}
@@ -45,7 +45,7 @@ function Slider() {
                 modules={[EffectCoverflow, Pagination]}
                 className="mySwiper">
                 {
-                    products.length && products.map((product) =>
+                    products && products.map((product) =>
 
                         <SwiperSlide 
                         key={product.id} 
