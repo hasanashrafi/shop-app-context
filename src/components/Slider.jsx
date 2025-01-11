@@ -26,8 +26,8 @@ function Slider() {
         <Swiper
           effect={'coverflow'}
           grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={2}
+          centeredSlides={false}
+          slidesPerView={3}
           coverflowEffect={{
             rotate: 50,
             stretch: 0,
@@ -40,7 +40,7 @@ function Slider() {
         >
           {products && products.map((product) => (
             <SwiperSlide key={product.id} className='shadow-md'>
-              <img src={product.images[1]} className='rounded-lg w-full md:h-72 h-56' alt={product.title} />
+              <img src={product.image} className='rounded-lg w-full md:h-72 h-56' alt={product.title} />
             </SwiperSlide>
           ))}
         </Swiper>
