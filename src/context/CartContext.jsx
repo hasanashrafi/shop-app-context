@@ -12,7 +12,7 @@ const reducer = (state, action) => {
   console.log(action)
 
   switch (action.type) {
-    case 'ADD_TO_CART':
+    case 'ADD_PRODUCT':
       if (!state.selectedProducts.find((item) => item.id === action.payload.id)) {
         state.selectedProducts.push({ ...action.payload, quantity: 1 })
       }
@@ -27,12 +27,34 @@ const reducer = (state, action) => {
       return {
         ...state,
         selectedProducts: [...newSelectedProducts],
-        ...sumProducts(newSelectedProducts),
-        checkout: false
+        ...sumProducts(newSelectedProducts)
+      }
+
+    case 'INCREASE':
+      const increaseIndex = state.selectedProducts.findIndex(product => product.id === action.payload.id)
+      state.selectedProducts[increaseIndex].quantity++
+
+      return {
+        ...state,
+        ...sumProducts(state.selectedProducts),
+
+      }
+
+    case 'DECREASE':
+      const decreaseIndex = state.selectedProducts.findIndex(product => product.id === action.payload.id)
+      state.selectedProducts[decreaseIndex].quantity--
+
+      return {
+        ...state,
+        ...sumProducts(state.selectedProducts),
+
       }
 
     case 'CHECKOUT':
-      checkout: true
+      return {
+        selectedProducts: [],
+        checkout: true
+      }
 
     default:
       return state
