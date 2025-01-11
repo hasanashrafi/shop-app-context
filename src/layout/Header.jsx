@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { CiShop } from 'react-icons/ci';
 import { FcShop } from 'react-icons/fc';
 
 function Header() {
@@ -27,9 +28,17 @@ function Header() {
         <section className="relative mx-auto w-full">
           <nav className="flex justify-between bg-teal-700 text-gray-100 w-full">
             <div className="px-5 xl:px-12 py-3 flex w-full items-center">
-              <a className="text-4xl rounded font-bold font-heading" href="#">
-                <FcShop className='text-teal-800' />
+
+              <a className="relative group text-4xl rounded font-bold font-heading" href="#">
+                <CiShop className='text-teal-100' />
               </a>
+
+              <div className='z-50 right-8 top-10 w-72 rounded-md h-64 absolute bg-teal-500'>
+                <p>1</p>
+                <p>1</p>
+                <p>1</p>
+              </div>
+
               <ul className="hidden  md:flex px-4 mx-auto font-semibold font-heading space-x-12">
                 <li><a className="hover:text-gray-200" href="#">Home</a></li>
                 <li><a className="hover:text-gray-200" href="#">Category</a></li>
