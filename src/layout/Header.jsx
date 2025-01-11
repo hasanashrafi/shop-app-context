@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { CiShop } from 'react-icons/ci';
 import { FcShop } from 'react-icons/fc';
+import BasketCart from '../modules/BasketCart';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,11 +68,7 @@ function Header() {
 
             {
               openBasket && (
-                <div className='absolute z-50 md:right-8 right-20 top-10 w-72 rounded-md h-64 bg-teal-500/90 p-2' ref={basketRef}>
-                  <p>1</p>
-                  <p>1</p>
-                  <p>1</p>
-                </div>
+               <BasketCart basketRef={basketRef}/>
               )
             }
 

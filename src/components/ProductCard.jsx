@@ -9,13 +9,13 @@ import { FaTrash } from 'react-icons/fa';
 function ProductCard({ product }) {
     const [state, dispatch] = useCart()
     const quantity = productQuantity(state, product.id)
-    console.log(quantity)
+  
 
     const clickHandler = (type) => {
         dispatch({ type, payload: product })
     }
 
-    console.log(state)
+    
 
     return (
         <div className="flex flex-col justify-around w-64 h-[430px] p-3 shadow-xl rounded-md text-black">
@@ -44,7 +44,6 @@ function ProductCard({ product }) {
                         )
                     }
 
-
                     {
                         quantity === 1 && <button onClick={() => clickHandler("REMOVE_PRODUCT")}>
                             <FaTrash className='text-xl text-gray-600 ml-1 hover:text-red-600 transition-all ease-in-out' />
@@ -58,8 +57,8 @@ function ProductCard({ product }) {
                         <button onClick={() => clickHandler("DECREASE")}>
                             <BiMinus className='text-xl rounded-full bg-red-500 text-white' />
                         </button>
-
                     }
+                    
                 </div>
             </div>
         </div>
