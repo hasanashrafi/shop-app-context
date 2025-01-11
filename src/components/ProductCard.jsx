@@ -8,8 +8,11 @@ import { useCart } from '../context/CartContext';
 function ProductCard({ product }) {
     const [state, dispatch] = useCart()
 
-    const clickHandler = ()=>{
-        dispatch({type: 'ADD_TO_CART', payload: product})
+    const clickHandler = () => {
+        dispatch({
+            type: 'ADD_TO_CART',
+            payload: product
+        })
     }
 
     console.log(state)
@@ -25,8 +28,8 @@ function ProductCard({ product }) {
                 <Link to={`/products/${product.id}`} className=" text-gray-600 hover:text">
                     <TbShoppingBagExclamation className='hover:text-teal-700 transition-all ease-in-out' />
                 </Link>
-                <button  onClick={clickHandler}
-                className='text-2xl text-gray-600'>
+                <button onClick={clickHandler}
+                    className='text-2xl text-gray-600'>
                     <TbShoppingBagPlus className='hover:text-teal-700 transition-all ease-in-out' />
                 </button>
             </div>
