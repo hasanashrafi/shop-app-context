@@ -3,8 +3,8 @@ import { ScaleLoader } from 'react-spinners'
 
 function Loader() {
     return (
-        <div className='flex items-center min-h-screen'>
-            <ScaleLoader color='#3357ef' />
+        <div className='flex items-center min-h-screen justify-center'>
+            <ScaleLoader color='#0f766e' />
         </div>
     )
 }
