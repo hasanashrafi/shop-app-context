@@ -14,21 +14,21 @@ const searchProducts = (products, search) => {
 const filterProducts = (products, category) => {
     if (!category || category.toLowerCase() === 'all') return products;
     const filteredProducts = products.filter(
-        (product) => product.category.name.toLowerCase() === category
+        (product) => product.category.toLowerCase() === category
     );
     return filteredProducts;
 }
 
-const createQueryObject = (currentQuery, newQuery) => {
+const createQueryObject = (productrentQuery, newQuery) => {
     if (newQuery.category === "all") {
-        const { category, ...rest } = currentQuery
+        const { category, ...rest } = productrentQuery
         return rest
     }
     if (newQuery.search === "") {
-        const { search, ...rest } = currentQuery
+        const { search, ...rest } = productrentQuery
         return rest
     }
-    return { ...currentQuery, ...newQuery }
+    return { ...productrentQuery, ...newQuery }
 }
 
 const getInitialQuery = (searchParams) => {
@@ -40,4 +40,27 @@ const getInitialQuery = (searchParams) => {
     return query
 }
 
-export { shortestTitle, searchProducts, filterProducts , getInitialQuery, createQueryObject }
+
+const sumProducts = (products) => {
+    const productsCounter = products.reduce((counter, product) => counter + product.quantity, 0)
+    const total = products.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2)
+    return { productsCounter, total }
+}
+
+
+
+
+
+
+
+
+
+
+export {
+    shortestTitle,
+    searchProducts,
+    filterProducts,
+    getInitialQuery,
+    createQueryObject,
+    sumProducts
+}
