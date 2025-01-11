@@ -7,14 +7,15 @@ import ProductsPage from '../pages/ProductsPage';
 import DetailsPage from '../pages/DetailsPage';
 import CheckOutPage from '../pages/CheckOutPage';
 import ProductsProvider from '../context/ProductContext';
+import CartProvider from '../context/CartContext';
 
 
 
 
 function Router() {
   return (
+<CartProvider>
 <ProductsProvider>
-
     <BrowserRouter>
       <Layout>
         <Routes>
@@ -27,6 +28,7 @@ function Router() {
       </Layout>
     </BrowserRouter>
 </ProductsProvider>
+</CartProvider>
 
   )
 }
