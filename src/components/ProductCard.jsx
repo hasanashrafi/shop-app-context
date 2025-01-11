@@ -3,8 +3,17 @@ import { shortestTitle } from '../utils/helper';
 import { Link } from 'react-router-dom';
 import { TbShoppingBagExclamation, TbShoppingBagPlus } from 'react-icons/tb';
 import { BiDollar } from 'react-icons/bi';
+import { useCart } from '../context/CartContext';
 
 function ProductCard({ product }) {
+    const [state, dispatch] = useCart()
+
+    const clickHandler = ()=>{
+        dispatch({type: 'ADD_TO_CART', payload: product})
+    }
+
+    console.log(state)
+
     return (
         <div className=" flex flex-col justify-around w-64 h-[430px] p-3  shadow-xl  rounded-md text-black">
             <img src={product.image} alt={product.title} className='rounded-md w-full h-52 mb-4 ' />
@@ -16,7 +25,8 @@ function ProductCard({ product }) {
                 <Link to={`/products/${product.id}`} className=" text-gray-600 hover:text">
                     <TbShoppingBagExclamation className='hover:text-teal-700 transition-all ease-in-out' />
                 </Link>
-                <button className='text-2xl text-gray-600'>
+                <button  onClick={clickHandler}
+                className='text-2xl text-gray-600'>
                     <TbShoppingBagPlus className='hover:text-teal-700 transition-all ease-in-out' />
                 </button>
             </div>
