@@ -7,16 +7,20 @@ import { TbShoppingBagPlus } from 'react-icons/tb'
 function BasketCard({ product, dispatch, state }) {
     const quantity = productQuantity(state, product.id)
 
+    const clickHandler = (type) => {
+        dispatch({ type, payload: product })
+    }
+
     return (
         <div className=''>
             <div className='w-full md:w-1/2 mx-auto p-4 text-teal-800'>
 
-                <div className='flex flex-col sm:flex items-center  justify-between p-2 border-b border-gray-200'>
+                <div className='flex flex-warp sm:flex items-center  justify-between p-2 border-b border-gray-200'>
                     <img src={product.image} className='rounded size-12' />
                     <p>{shortestTitle(product.title)}</p>
                     <p>{product.price}</p>
                     <p className='rounded-full text-white bg-orange-700 px-1'>x{product.quantity}</p>
-                  
+
                     <div className='flex  items-center justify-between'>
                         {
                             quantity === 0 ? (
@@ -32,7 +36,7 @@ function BasketCard({ product, dispatch, state }) {
                         }
 
                         {!!quantity && <p className='mx-2 font-semibold'>{quantity}</p>}
-                      
+
                         {
                             quantity === 1 && <button onClick={() => clickHandler("REMOVE_PRODUCT")}>
                                 <FaTrash className='text-lg text-gray-600 ml-1 hover:text-red-600 transition-all ease-in-out' />
@@ -47,11 +51,11 @@ function BasketCard({ product, dispatch, state }) {
                             </button>
                         }
 
-                   
+
                     </div>
-                 
+
                 </div>
-                
+
             </div>
         </div>
     )
