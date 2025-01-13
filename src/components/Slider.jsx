@@ -27,22 +27,22 @@ function Slider() {
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
-        centeredSlides={false}
-        slidesPerView={3}
+        centeredSlides={true}
+        slidesPerView={2}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
           depth: 100,
-          modifier: 1,
+          modifier: 2,
           slideShadows: true,
         }}
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >
         {products && products.map((product) => (
-          <SwiperSlide key={product.id} className='shadow-md'>
+          <SwiperSlide key={product.id} className='shadow-md p-2'>
             <img src={product.image} className='rounded-lg w-full md:h-72 h-56' alt={product.title} />
-            <p className='text-black text-center p-1'>{shortestTitle(product.title)}</p>
+            <p className='text-black text-center'>{shortestTitle(product.title)}</p>
           </SwiperSlide>
         ))}
       </Swiper>
