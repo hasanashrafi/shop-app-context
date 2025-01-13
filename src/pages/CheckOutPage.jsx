@@ -19,8 +19,8 @@ function CheckOutPage() {
   return (
     <div className='min-h-screen '>
       {
-        state.selectedProducts.map(product => (
-          <BasketCard product={product} state={state} dispatch={dispatch} />
+        state.selectedProducts.map((product) => (
+          <BasketCard key={product.id} product={product} state={state} dispatch={dispatch} />
         ))
       }
       <div className='text-black flex justify-between p-2 border-t border-gray-200'>
