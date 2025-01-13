@@ -44,13 +44,13 @@ function ProductCard({ product }) {
                         )
                     }
 
+                    {!!quantity  && <p className='mx-2 font-semibold'>{quantity}</p>}
                     {
                         quantity === 1 && <button onClick={() => clickHandler("REMOVE_PRODUCT")}>
-                            <FaTrash className='text-xl text-gray-600 ml-1 hover:text-red-600 transition-all ease-in-out' />
+                            <FaTrash className='text-lg text-gray-600 ml-1 hover:text-red-600 transition-all ease-in-out' />
                         </button>
                     }
 
-                    {quantity > 1 && <p className='mx-2 font-semibold'>{quantity}</p>}
 
                     {
                         quantity > 1 &&
