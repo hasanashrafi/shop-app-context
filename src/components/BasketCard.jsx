@@ -1,23 +1,17 @@
 
 import { BiMinus, BiPlus } from 'react-icons/bi'
 import { productQuantity, shortestTitle } from '../utils/helper'
-import { Link } from 'react-router-dom'
 import { FaTrash } from 'react-icons/fa'
 import { TbShoppingBagPlus } from 'react-icons/tb'
 
 function BasketCard({ product, dispatch, state }) {
     const quantity = productQuantity(state, product.id)
 
-    const { productCounter, total } = state
-    const clickHandler = (type) => {
-        dispatch({ type, payload: product })
-    }
-
     return (
         <div className=''>
             <div className='w-full md:w-1/2 mx-auto p-4 text-teal-800'>
 
-                <div className='flex items-center  justify-between p-2 border-b border-gray-200'>
+                <div className='flex flex-col sm:flex items-center  justify-between p-2 border-b border-gray-200'>
                     <img src={product.image} className='rounded size-12' />
                     <p>{shortestTitle(product.title)}</p>
                     <p>{product.price}</p>
@@ -53,16 +47,9 @@ function BasketCard({ product, dispatch, state }) {
                             </button>
                         }
 
+                   
                     </div>
-                    <div className='flex justify-between p-2 border-t border-gray-200'>
-                    <p>Total:</p>
-                    <p>${total}</p>
-                </div>
-
-                <button className='absolute bottom-1 right-0 left-0 m-2 text-center p-1.5 hover:bg-teal-500 ease-in-out transition-all hover:text-white bg-white rounded-lg text-teal-700 '
-                    onClick={() => clickHandler("CHECKOUT")}>
-                    CheckOut
-                </button>
+                 
                 </div>
                 
             </div>

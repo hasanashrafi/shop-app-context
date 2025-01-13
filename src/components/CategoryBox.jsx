@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { createQueryObject } from '../utils/helper';
+import { createQueryObject, shortestTitle } from '../utils/helper';
 
 function CategoryBox({ categories, setQuery }) {
   const [selectedCategory, setSelectedCategory] = useState("");

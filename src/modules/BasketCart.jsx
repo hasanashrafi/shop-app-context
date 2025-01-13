@@ -16,7 +16,7 @@ function BasketCart({ basketRef }) {
     }
 
     return (
-        <div className='absolute z-50 md:right-8  top-16 w-[90%] mx-auto right-0 left-0 rounded-md h-64 bg-teal-800 p-2' ref={basketRef}>
+        <div className='absolute z-50   top-12 w-[84%] md:w-1/3 right-16 md:right-8 rounded-md h-64 bg-teal-800 p-2' ref={basketRef}>
             {selectedProducts.map((product, index) => (
                 <div key={index} className='flex items-center text-white justify-between p-2 border-b border-gray-200'>
                     <img src={product.image} className='rounded-full size-6'/>
