@@ -18,7 +18,7 @@ function ProductCard({ product }) {
     
 
     return (
-        <div className="flex flex-col justify-around w-64 h-[430px] p-3 shadow-xl rounded-md text-black">
+        <div className="flex flex-col justify-around w-80 md:w-64 h-[430px] p-3 shadow-2xl rounded-lg text-black">
             <img src={product.image} alt={product.title} className='rounded-md w-full h-52 mb-4' />
             <h2 className="font-semibold">{product.title}</h2>
             <p className="text-sm text-gray-600">{shortestTitle(product.description)}</p>
