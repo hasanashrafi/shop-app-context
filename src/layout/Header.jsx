@@ -5,6 +5,7 @@ import { useCart } from '../context/CartContext';
 
 function Header() {
   const [state] = useCart()
+  console.log(state)
 
   const [isOpen, setIsOpen] = useState(false);
   const [openBasket, setOpenBasket] = useState(false);
@@ -69,7 +70,7 @@ function Header() {
               </svg>
               <span className="flex absolute -mt-5 ml-4">
                 {
-                  state.productsCounter >= 1 &&
+                  
                   <>
 
                     <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-red-500 opacity-75">
