@@ -49,7 +49,7 @@ function ProductsPage() {
 
 
   return (
-    <div className='mt-10 w-full p-2 flex flex-col justify-center mx-auto'>
+    <div className='min-h-screen mt-10 w-full p-2 flex flex-col justify-center mx-auto'>
       <CategoryBox categories={categories} setQuery={setQuery} />
       <SearchBar search={search} setSearch={setSearch} searchHandler={searchHandler} />
       <div className='mx-auto flex flex-wrap items-center gap-3 justify-center'>
