@@ -13,7 +13,7 @@ function BasketCard({ product, dispatch, state }) {
 
     return (
         <div className=''>
-            <div className='w-full md:w-1/2 mx-auto p-4 text-teal-800'>
+            <div className='w-full md:w-1/3 mx-auto p-4 text-teal-800'>
 
                 <div className='flex flex-warp sm:flex items-center  justify-between p-2 border-b border-gray-200'>
                     <img src={product.image} className='rounded size-12' />
