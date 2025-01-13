@@ -1,6 +1,7 @@
 import React from 'react'
 import { useCart } from '../context/CartContext'
 import { shortestTitle } from '../utils/helper'
+import { Link } from 'react-router-dom'
 
 function BasketCart({ basketRef }) {
     const [state] = useCart()
@@ -28,6 +29,10 @@ function BasketCart({ basketRef }) {
                 <p>Total:</p>
                 <p>${total}</p>
             </div>
+            <Link className='absolute bottom-1 right-0 left-0 m-2 text-center p-1.5 hover:bg-teal-500 ease-in-out transition-all hover:text-white bg-white rounded-lg text-teal-700 '
+             to="/checkout">
+            CheckOut
+            </Link>
         </div>
     )
 }
