@@ -40,8 +40,8 @@ function Slider() {
         className="mySwiper"
       >
         {products && products.map((product) => (
-          <SwiperSlide key={product.id} className='shadow-md p-2'>
-            <img src={product.image} className='rounded-lg w-full md:h-72 h-56' alt={product.title} />
+          <SwiperSlide key={product.id} className='p-2 w-fit'>
+            <img src={product.image} className='rounded-lg w-full md:w-1/2 mx-auto md:h-72 h-56' alt={product.title} />
             <p className='text-black text-center'>{shortestTitle(product.title)}</p>
           </SwiperSlide>
         ))}
