@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useProducts } from '../context/ProductContext';
 import Loader from './Loader';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { shortestTitle } from '../utils/helper';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import { EffectCoverflow, Pagination } from 'swiper/modules';
-import { shortestTitle } from '../utils/helper';
 
 function Slider() {
   const products = useProducts();
